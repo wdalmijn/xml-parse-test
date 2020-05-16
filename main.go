@@ -15,11 +15,11 @@ type testStruct struct {
 
 func main() {
 	tests := []testStruct{
-		testStruct{
-			numWorkers: 0,
-			test:       "xml_token",
-			resource:   "release",
-		},
+		// testStruct{
+		// 	numWorkers: 0,
+		// 	test:       "xml_token",
+		// 	resource:   "release",
+		// },
 		// testStruct{
 		// 	numWorkers: 2,
 		// 	test:       "fetch_inner_xml",

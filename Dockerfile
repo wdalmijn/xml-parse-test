@@ -6,4 +6,6 @@ COPY . /go/src/app
 
 WORKDIR /go/src/app
 
-CMD "go run main.go"
+RUN go build
+
+CMD ./golang-xml-parse-bench

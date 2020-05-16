@@ -347,6 +347,9 @@ func fetchInnerXML(xmlFile *os.File, resource string, numWorkers int) resourceSt
 	if resource == "master" {
 		openTag = "<master id"
 	}
+	if resource == "release" {
+		openTag = "<release id"
+	}
 
 	for scanner.Scan() {
 		line := strings.TrimSpace(scanner.Text())

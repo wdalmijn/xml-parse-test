@@ -325,6 +325,9 @@ func fetchInnerXML(xmlFile *os.File, resource string, numWorkers int) resourceSt
 		if resource == "master" {
 			workerChan = SpawnWorkerM(dataChan, &wg)
 		}
+		if resource == "release" {
+			workerChan = SpawnWorkerR(dataChan, &wg)
+		}
 		go func() {
 			for w := range workerChan {
 				itemsChan <- w

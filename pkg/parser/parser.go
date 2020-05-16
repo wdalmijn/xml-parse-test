@@ -8,7 +8,7 @@ import (
 
 func Parser(algorithm string, resource string, numWorkers int) {
 	// Open our xmlFile
-	path := fmt.Sprintf("discogs_%ss.xml", resource)
+	path := fmt.Sprintf("/opt/discogs/dumps/xml/discogs_latest_%ss.xml", resource)
 	xmlFile, err := os.Open(path)
 
 	defer xmlFile.Close()

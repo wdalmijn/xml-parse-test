@@ -84,6 +84,10 @@ func xmlToken(xmlFile *os.File, resource string) resourceStruct {
 			// If we just read a StartElement token
 			if se.Name.Local == resource {
 				resourceFunc(decoder, se)
+
+				if counter%100000 == 0 {
+					fmt.Printf("Decoded %d items.\n", counter)
+				}
 			}
 		}
 	}
